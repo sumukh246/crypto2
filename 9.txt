@@ -1,0 +1,48 @@
+p9.
+(a)
+
+open badstore
+
+click what's new
+add item to cart
+
+go to search on left side
+
+<script>alert(document.cookie)</script>
+
+press enter
+
+output shows cartid (cookie value)
+
+(b)
+sudo nano port_scan.sh
+
+write program :
+
+#!/bin/bash
+host="www.example.com"
+
+read -p "Enter starting port: " start_port
+read -p "Enter ending port: " end_port
+
+for (( port=start_port; port<=end_port; port++ ))
+do
+    echo "Scanning port $port..."
+    nc -zv -w1 "$host" "$port" 2>&1
+done
+
+save with ctrl + o
+press enter
+ctrl + x
+
+chmod +x port_scan.sh
+./port_scan.sh
+
+enter starting port number: 22
+enter ending port number: 80
+
+(c)
+nmap 192.168.56.1
+nmap www.google.com
+nmap -sV 192.168.56.1
+nmap -sV www.google.co
