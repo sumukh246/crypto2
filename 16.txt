@@ -1,0 +1,46 @@
+p16.
+(a)
+
+open terminal
+
+sudo scapy
+from scapy.all import *
+
+result, _ = traceroute(["www.example.com", "www.google.com"], maxttl=20)
+result.show()
+(b)
+
+go to browser and open wikipedia image in new tab and copy image link
+
+open terminal
+
+nc -l -p 5000
+
+go to browser firefox and search ->
+
+http://localhost:5000
+
+come back to terminal
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Server: nooblinux
+
+<!doctype html>
+<title>bnm</title>
+<h1>cars</h1>
+<img src="image_link">
+(c)
+
+open badstore
+
+click what's new
+add item to cart
+
+go to search on left side
+
+<script>alert(document.cookie)</script>
+
+press enter
+
+output shows cartid (cookie value)

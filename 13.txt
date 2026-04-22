@@ -1,0 +1,50 @@
+p13.
+(a)
+
+go to browser and open wikipedia image in new tab and copy image link
+
+open terminal
+
+nc -l -p 5000
+
+go to browser firefox and search ->
+
+http://localhost:5000
+
+come back to terminal
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Server: nooblinux
+
+<!doctype html>
+<title>bnm</title>
+<h1>cars</h1>
+<img src="image_link">
+(b)
+nmap 192.168.1.101-120
+nmap 192.168.1.0/24
+(c)
+
+open badstore
+
+open firefox and enter address of badstore
+
+go to login ->
+name : joe@supplier.com
+
+password : iforgot
+
+click login
+
+go to left side previous orders -> open it
+
+press:
+
+Ctrl + F
+
+search:
+
+46.95
+
+write the card used values for all 46.95 values in the output

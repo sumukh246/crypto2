@@ -1,0 +1,57 @@
+p12.
+(a)
+
+open terminal
+
+sudo scapy
+from scapy.all import *
+
+target_ip = "192.168.2.31"
+ports = [22, 80, 443]
+
+for port in ports:
+    packet = IP(dst=target_ip)/TCP(dport=port, flags="S")
+    response = sr1(packet, timeout=1, verbose=0)
+
+    if response:
+        if response.haslayer(TCP) and response[TCP].flags == "SA":
+            print(f"Port {port} is open")
+        elif response.haslayer(TCP) and response[TCP].flags == "RA":
+            print(f"Port {port} is closed")
+(b)
+nmap --script vuln google.com
+nmap --script vuln 192.168.56.1
+nmap -oN output.txt --script vuln 192.168.56.1
+(c)
+
+open badstore
+
+login using:
+
+admin' --
+
+click login
+
+select current users
+click do it
+
+copy password of:
+
+joe@supplier.com
+
+right click → search in google
+open MD5 decrypt
+paste hash → get password
+
+come back to badstore
+
+click supplier login
+
+enter:
+
+name : joe@supplier.com
+password : iforgot (or decrypted password)
+
+login and access supplier section
+
+show the output of upload price list
